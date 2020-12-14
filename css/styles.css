@@ -10,5 +10,29 @@ html{
 }
 
 body{
-    
+    font-family: "Lato", sans-serif;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 2s;
+    margin: 5rem;
+}
+
+.field{
+    display: grid;
+    grid-template-columns: 1.6fr repeat(7, 1fr);
+    justify-items: center;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(1.5rem);
+    padding: 1.5rem 3rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
