@@ -72,8 +72,8 @@ a:hover{
 }
 
 .global-scale h2{
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 300;
 }
 
 .global-scale h2:not(:first-of-type){
@@ -202,6 +202,10 @@ a:hover{
 
     .container{
         padding: 5rem 1rem;
+    }
+
+    .global-scale h2{
+        font-weight: 400;
     }
 }
 
