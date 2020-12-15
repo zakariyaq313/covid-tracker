@@ -9,22 +9,79 @@
     <link rel="shortcut icon" href="images/icon.svg">
 </head>
 <body>
-    <div class="container">
-        <span class="field">
-            <h2>Country</h2>
-            <p>Total cases</p>
-            <p>New cases</p>
-            <p>Active cases</p>
-            <p>Deaths</p>
-            <p>Recovered</p>
-            <p>Population</p>
-            <p>Tests</p>
-        </span>
+    <nav>
+        <div class="logo">
+            <img src="images/icon.svg" alt="Corona virus">
+            <h2>Covid-19 <br> Tracker</h2>
+        </div>
+    
+        <div class="copyright">
+            <p>Vector created by <a href='https://www.freepik.com/vectors/background'>Freepik</a></p>
+            <p>Inspired from <a href="https://www.worldometers.info/coronavirus/">Worldometers</a></p>
+            <p>&copy; <a href="https://zakariyaq313.github.io/my_website/">Muhammad Zakariya</a></p>
+        </div>
+    </nav>
+
+    <div class="global-scale">
+        <h2>Total cases globally :</h2>
+        <h1 class="total"></h1>
+        <h2>Deaths :</h2>
+        <h1 class="deaths"></h1>
+        <h2>Recovered :</h2>
+        <h1 class="recovered"></h1>
     </div>
 
-    <!-- <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a> -->
-    <!-- <a href='https://www.freepik.com/vectors/health'>Health vector created by freepik - www.freepik.com</a> -->
-    <!-- <a href='https://www.freepik.com/vectors/home'>Home vector created by pikisuperstar - www.freepik.com</a> -->
+    <div class="global-stats">
+
+        <span>
+            <span class="column">
+                <p>Active cases :&nbsp;</p>
+                <p></p>
+            </span>
+
+            <span class="column">
+                <p>Mild :&nbsp;</p>
+                <p class="total"></p>
+            </span>
+
+            <span class="column">
+                <p>Critical :&nbsp;</p>
+                <p class="critical"></p>
+            </span>
+
+        </span>
+        <span>
+
+            <span class="column">
+                <p>Closed cases :&nbsp;</p>
+                <p></p>
+            </span>
+
+            <span class="column">
+                <p>Deaths :&nbsp;</p>
+                <p class="deaths"></p>
+            </span>
+
+            <span class="column">
+                <p>Recovered :&nbsp;</p>
+                <p class="recovered"></p>
+            </span>
+        </span>
+
+    </div>
+
+    <div class="container">
+        <span class="field static">
+            <h2>Country</h2>
+            <h2>Total cases</h2>
+            <h2 class="today">Today</h2>
+            <h2>Active</h2>
+            <h2>Deaths</h2>
+            <h2>Recovered</h2>
+            <h2 class="population">Population</h2>
+            <h2 class="tests">Tests</h2>
+        </span>
+    </div>
 
     <script src="./main.js"></script>
 </body>
