@@ -22,6 +22,13 @@ body{
     transition: opacity 1s;
 }
 
+.light-body{
+    background-color: transparent;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 nav{
     display: flex;
     margin: 3rem;
@@ -31,6 +38,7 @@ nav{
 .logo{
     display: flex;
     align-items: center;
+    transition: opacity 1s;
 }
 
 .logo img{
@@ -58,12 +66,89 @@ a:hover{
     color: #ffffff;
 }
 
+.theme{
+    margin-top: 2rem;
+    user-select: none;
+}
+
+#toggle{
+    display: none;
+}
+
+label{
+    width: 8rem;
+    height: 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    vertical-align: middle;
+    margin-left: 2rem;
+    cursor: pointer;
+    padding: 0rem;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .1);
+    margin: 2rem 0 0 3rem;
+}
+
+label img{
+    position: absolute;
+    width: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.sun{
+    margin-left: .5rem;
+}
+
+.moon{
+    right: 0;
+    margin-right: .5rem;
+}
+
+label::after{
+    content: "";
+    background-image: url("../images/moon.svg"), linear-gradient(to right, #ffffff, #ffffff);
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    margin-left: .5rem;
+}
+
+#toggle:checked ~ label{
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#toggle:checked ~ label::after{
+    right: 0;
+    margin-right: .5rem;
+}
+
+#toggle:active ~ label::after{
+    padding-right: 2rem;
+}
+
+#toggle:active .sun{
+    opacity: 1;
+}
+
+#toggle:active .moon{
+    opacity: 0;
+}
+
 .global-scale{
     padding: 4rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    transition: opacity 1s;
 }
 
 .global-scale h1{
@@ -104,10 +189,10 @@ a:hover{
     font-size: 1.8rem;
     margin: 0 20%;
     padding: 5rem;
+    transition: opacity 1s;
 }
 
 .column{
-    display: flex;
     padding: 1rem;
 }
 
@@ -130,6 +215,11 @@ a:hover{
     align-items: center;
     box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
     border-radius: .6rem;
+}
+
+.light-field{
+    background-color: transparent;
+    backdrop-filter: blur(1.5rem);
 }
 
 .field h2{

@@ -104,3 +104,26 @@ function fillData(data, index) {
         console.log(error);
     })
 }());
+
+let toggleButton = document.getElementById("toggle");
+
+toggleButton.addEventListener("click", () => {
+    let body = document.querySelector("body"),
+        globalScale = document.querySelector("div.global-scale"),
+        globalStats = document.querySelector("div.global-stats"),
+        logo = document.querySelector("div.logo");
+        globalScale.style.opacity = "0";
+        globalStats.style.opacity = "0";
+        logo.style.opacity = "0";
+
+    setTimeout(() => {
+        globalScale.style.opacity = "1";
+        globalStats.style.opacity = "1";
+        logo.style.opacity = "1";
+        body.classList.toggle("light-body");
+        let field = document.querySelectorAll("span.field");
+        for (let i = 0; i < field.length; i++) {
+            field[i].classList.toggle("light-field");
+        }
+    }, 1000);
+})
