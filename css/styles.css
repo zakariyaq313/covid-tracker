@@ -217,6 +217,13 @@ label::after{
     border-radius: .6rem;
 }
 
+.static{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .light-field{
     background-color: transparent;
     backdrop-filter: blur(1.5rem);
