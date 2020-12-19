@@ -75,13 +75,18 @@ function fillData(data, index) {
     field.children[1].textContent = numberFormat.format(data[index].cases);
     field.children[3].textContent = numberFormat.format(data[index].active);
     field.children[4].textContent = numberFormat.format(data[index].deaths);
-    field.children[5].textContent = numberFormat.format(data[index].recovered);
     field.children[6].textContent = numberFormat.format(data[index].population);
     field.children[7].textContent = numberFormat.format(data[index].tests);
     if(data[index].todayCases === 0){
         field.children[2].textContent = "-";
     } else {
         field.children[2].textContent = numberFormat.format(data[index].todayCases);
+    }
+
+    if (data[index].recovered === 0){
+        field.children[5].textContent = "N/A";
+    } else {
+        field.children[5].textContent = numberFormat.format(data[index].recovered);
     }
 }
 
