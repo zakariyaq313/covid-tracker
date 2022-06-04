@@ -20,6 +20,7 @@ body{
     background-color: #06090f;
     opacity: 0;
     transition: opacity 1s;
+    -webkit-text-size-adjust: 100%;
 }
 
 .light-body{
@@ -89,6 +90,7 @@ label{
     overflow: hidden;
     background-color: rgba(255, 255, 255, .1);
     margin: 2rem 0 0 3rem;
+    -webkit-tap-highlight-color: transparent;
 }
 
 label img{
